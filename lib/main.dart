@@ -1,6 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,11 +17,11 @@ class LoginPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Login Page",
+          title: const Text(
+            "Login Page",
           ),
         ),
         body: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
@@ -32,7 +29,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 children: [
                   const Image(
-                      image: AssetImage("images/login.png"),
+                      image: AssetImage("assets/images/login.png"),
                       height: 100.0,
                       width: 100.0),
                   const Text("Login Form",
@@ -58,9 +55,11 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       SizedBox(height: 50.0),
-                      ElevatedButton(onPressed: () {
-                        print(username.text + " " + password.text);
-                      }, child: const Text("Submit"))
+                      ElevatedButton(
+                          onPressed: () {
+                            print(username.text + " " + password.text);
+                          },
+                          child: const Text("Submit"))
                     ],
                   )
                 ],
@@ -83,7 +82,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-
               ListTile(
                 title: Text("All Mail Inboxes"),
                 leading: Icon(Icons.mail),
@@ -106,8 +104,6 @@ class LoginPage extends StatelessWidget {
             ],
           ),
         ),
-
-
         endDrawer: Drawer(
           child: ListView(
             children: const <Widget>[
@@ -123,8 +119,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-
-
               Divider(
                 height: 0.2,
               ),
@@ -144,7 +138,6 @@ class LoginPage extends StatelessWidget {
           ),
         ),
         persistentFooterButtons: <Widget>[
-
           RaisedButton(
             onPressed: () {},
             color: Colors.blue,
@@ -152,10 +145,8 @@ class LoginPage extends StatelessWidget {
               Icons.home_outlined,
               color: Colors.white,
             ),
-
           ),
           RaisedButton(
-
             onPressed: () {},
             color: Colors.green,
             child: const Icon(
@@ -166,14 +157,5 @@ class LoginPage extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
